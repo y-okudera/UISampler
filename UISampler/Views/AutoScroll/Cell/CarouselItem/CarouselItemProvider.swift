@@ -62,7 +62,6 @@ extension CarouselItemProvider: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell: CarouselItemCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.label.text = "\(indexPath.row)"
         cell.configure(parentIndexPath: self.parentIndexPath, image: self.items[indexPath.row % self.items.count])
         return cell
     }

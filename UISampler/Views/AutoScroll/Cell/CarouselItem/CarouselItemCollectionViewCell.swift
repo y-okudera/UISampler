@@ -11,7 +11,6 @@ import UIKit
 final class CarouselItemCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet private weak var imageView: UIImageView!
-    @IBOutlet weak var label: UILabel!
 
     private(set) var parentIndexPath: IndexPath!
 

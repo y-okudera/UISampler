@@ -18,32 +18,19 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5kq-CL-Swu">
-                        <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="50" id="d3R-UX-75g"/>
-                        </constraints>
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="70"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJX-yG-eZi">
-                        <rect key="frame" x="0.0" y="50" width="80" height="20"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="5kq-CL-Swu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0l1-KP-xzQ"/>
-                <constraint firstAttribute="bottom" secondItem="uJX-yG-eZi" secondAttribute="bottom" id="BlN-FD-HIp"/>
-                <constraint firstAttribute="trailing" secondItem="uJX-yG-eZi" secondAttribute="trailing" id="Nqk-Df-t5m"/>
-                <constraint firstItem="uJX-yG-eZi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cAb-Ra-BBQ"/>
+                <constraint firstAttribute="bottom" secondItem="5kq-CL-Swu" secondAttribute="bottom" id="BqK-jG-0OY"/>
                 <constraint firstItem="5kq-CL-Swu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="oyB-FC-cAL"/>
                 <constraint firstAttribute="trailing" secondItem="5kq-CL-Swu" secondAttribute="trailing" id="qEO-Gd-LKP"/>
-                <constraint firstItem="uJX-yG-eZi" firstAttribute="top" secondItem="5kq-CL-Swu" secondAttribute="bottom" id="tOb-vB-oQc"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
                 <outlet property="imageView" destination="5kq-CL-Swu" id="bE4-3S-Mou"/>
-                <outlet property="label" destination="uJX-yG-eZi" id="wZ8-6n-tUk"/>
             </connections>
             <point key="canvasLocation" x="139" y="153"/>
         </collectionViewCell>
