@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// カルーセルの要素のセル
 final class CarouselItemCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet private weak var imageView: UIImageView!

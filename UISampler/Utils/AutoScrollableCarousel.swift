@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import InfiniteLayout
 
 enum AutoScrollDirection {
     case up, down, left, right
@@ -14,7 +15,7 @@ enum AutoScrollDirection {
 
 protocol AutoScrollableCarousel: AnyObject {
 
-    var collectionView: UICollectionView! { get }
+    var collectionView: InfiniteCollectionView! { get }
     var autoScrollTimer: Timer { get set }
 
     /// 自動スクロールを開始する

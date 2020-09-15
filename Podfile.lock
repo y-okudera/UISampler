@@ -1,0 +1,20 @@
+PODS:
+  - InfiniteLayout (0.4.2):
+    - InfiniteLayout/Core (= 0.4.2)
+  - InfiniteLayout/CocoaProxy (0.4.2)
+  - InfiniteLayout/Core (0.4.2):
+    - InfiniteLayout/CocoaProxy
+
+DEPENDENCIES:
+  - InfiniteLayout
+
+SPEC REPOS:
+  trunk:
+    - InfiniteLayout
+
+SPEC CHECKSUMS:
+  InfiniteLayout: de51cfad9ed480a3e3a0af7d28242d3257c606d9
+
+PODFILE CHECKSUM: 22907ebf3da73d2da31a9a806d8f12d0b1799bd5
+
+COCOAPODS: 1.9.3

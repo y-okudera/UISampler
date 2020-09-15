@@ -6,6 +6,7 @@
 //  Copyright © 2020 yuoku. All rights reserved.
 //
 
+import InfiniteLayout
 import UIKit
 
 protocol CarouselItemProviderCompatible {
@@ -15,13 +16,10 @@ protocol CarouselItemProviderCompatible {
     var parentIndexPath: IndexPath! { get }
     var items: [Item] { get }
     func set(parentIndexPath: IndexPath)
-    func set(items: [UIImage])
-    func initialPosition(collectionView: UICollectionView)
+    func set(items: [Item])
 }
 
 final class CarouselItemProvider: NSObject, CarouselItemProviderCompatible {
-
-    private let infiniteSize = 1_000_000
 
     var parentIndexPath: IndexPath!
     var items = [UIImage]()
@@ -33,35 +31,23 @@ final class CarouselItemProvider: NSObject, CarouselItemProviderCompatible {
     func set(items: [UIImage]) {
         self.items = items
     }
-
-    func initialPosition(collectionView: UICollectionView) {
-        let midIndexPath = IndexPath(row: infiniteSize / 2, section: 0)
-
-        guard collectionView.numberOfItems(inSection: 0) > midIndexPath.row else {
-            return
-        }
-        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            switch layout.scrollDirection {
-            case .horizontal:
-                collectionView.scrollToItem(at: midIndexPath, at: .centeredHorizontally, animated: false)
-            case .vertical:
-                collectionView.scrollToItem(at: midIndexPath, at: .centeredVertically, animated: false)
-            @unknown default:
-                break
-            }
-        }
-    }
 }
 
 extension CarouselItemProvider: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.infiniteSize
+        return self.items.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell: CarouselItemCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+
+        if let infiniteCollectionView = collectionView as? InfiniteCollectionView {
+            let realIndexPath = infiniteCollectionView.indexPath(from: indexPath)
+            cell.configure(parentIndexPath: self.parentIndexPath, image: self.items[realIndexPath.row])
+            return cell
+        }
         cell.configure(parentIndexPath: self.parentIndexPath, image: self.items[indexPath.row % self.items.count])
         return cell
     }
@@ -74,8 +60,11 @@ extension CarouselItemProvider: UICollectionViewDelegate {
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let cell = collectionView.cellForItem(at: indexPath) as? CarouselItemCollectionViewCell {
-            print("CarouselItemProvider didSelectItemAt", indexPath, "Carousel index", String(describing: cell.parentIndexPath))
+
+        if let infiniteCollectionView = collectionView as? InfiniteCollectionView,
+            let cell = infiniteCollectionView.cellForItem(at: indexPath) as? CarouselItemCollectionViewCell {
+            let realIndexPath = infiniteCollectionView.indexPath(from: indexPath)
+            print("CarouselItem didSelectItemAt", realIndexPath, "Carousel index", String(describing: cell.parentIndexPath))
         }
     }
 }
