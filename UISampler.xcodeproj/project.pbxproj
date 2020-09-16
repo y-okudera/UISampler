@@ -27,6 +27,14 @@
 		FC1112A725086B8F004C613D /* CarouselItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC1112A525086B8F004C613D /* CarouselItemCollectionViewCell.xib */; };
 		FC1112A925086BF6004C613D /* CarouselItemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1112A825086BF6004C613D /* CarouselItemProvider.swift */; };
 		FC1112AB250871A2004C613D /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1112AA250871A2004C613D /* UIViewController+.swift */; };
+		FC1AB951251132F400D59CA2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AB950251132F400D59CA2 /* TabBarController.swift */; };
+		FC1AB9552511330600D59CA2 /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC1AB9542511330600D59CA2 /* TabBarController.storyboard */; };
+		FC1AB9582511357000D59CA2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AB9572511357000D59CA2 /* HomeViewController.swift */; };
+		FC1AB95A2511357600D59CA2 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC1AB9592511357600D59CA2 /* HomeViewController.storyboard */; };
+		FC1AB95D2511359E00D59CA2 /* BookshelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AB95C2511359E00D59CA2 /* BookshelfViewController.swift */; };
+		FC1AB95F251135A900D59CA2 /* BookshelfViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC1AB95E251135A900D59CA2 /* BookshelfViewController.storyboard */; };
+		FC1AB9612511461E00D59CA2 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AB9602511461E00D59CA2 /* UIView+.swift */; };
+		FC6485E5251212BB00430362 /* HomeViewController+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6485E4251212BB00430362 /* HomeViewController+Animation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +87,14 @@
 		FC1112A525086B8F004C613D /* CarouselItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		FC1112A825086BF6004C613D /* CarouselItemProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItemProvider.swift; sourceTree = "<group>"; };
 		FC1112AA250871A2004C613D /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		FC1AB950251132F400D59CA2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		FC1AB9542511330600D59CA2 /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
+		FC1AB9572511357000D59CA2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FC1AB9592511357600D59CA2 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		FC1AB95C2511359E00D59CA2 /* BookshelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookshelfViewController.swift; sourceTree = "<group>"; };
+		FC1AB95E251135A900D59CA2 /* BookshelfViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookshelfViewController.storyboard; sourceTree = "<group>"; };
+		FC1AB9602511461E00D59CA2 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		FC6485E4251212BB00430362 /* HomeViewController+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Animation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +204,7 @@
 		FC11128B2508677C004C613D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FC1AB94E251132C900D59CA2 /* FavoriteAnimation */,
 				FC111291250868DE004C613D /* AutoScroll */,
 				FC11128C25086781004C613D /* Top */,
 			);
@@ -219,6 +236,7 @@
 				FC1112932508694C004C613D /* UICollectionView+.swift */,
 				FC1112AA250871A2004C613D /* UIViewController+.swift */,
 				FC1112952508697C004C613D /* AutoScrollableCarousel.swift */,
+				FC1AB9602511461E00D59CA2 /* UIView+.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -249,6 +267,44 @@
 				FC1112A825086BF6004C613D /* CarouselItemProvider.swift */,
 			);
 			path = CarouselItem;
+			sourceTree = "<group>";
+		};
+		FC1AB94E251132C900D59CA2 /* FavoriteAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				FC1AB95B2511359100D59CA2 /* Bookshelf */,
+				FC1AB9562511355E00D59CA2 /* Home */,
+				FC1AB94F251132DD00D59CA2 /* TabBarController */,
+			);
+			path = FavoriteAnimation;
+			sourceTree = "<group>";
+		};
+		FC1AB94F251132DD00D59CA2 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				FC1AB950251132F400D59CA2 /* TabBarController.swift */,
+				FC1AB9542511330600D59CA2 /* TabBarController.storyboard */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		FC1AB9562511355E00D59CA2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FC1AB9572511357000D59CA2 /* HomeViewController.swift */,
+				FC6485E4251212BB00430362 /* HomeViewController+Animation.swift */,
+				FC1AB9592511357600D59CA2 /* HomeViewController.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FC1AB95B2511359100D59CA2 /* Bookshelf */ = {
+			isa = PBXGroup;
+			children = (
+				FC1AB95C2511359E00D59CA2 /* BookshelfViewController.swift */,
+				FC1AB95E251135A900D59CA2 /* BookshelfViewController.storyboard */,
+			);
+			path = Bookshelf;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,10 +416,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC1AB9552511330600D59CA2 /* TabBarController.storyboard in Resources */,
 				FC111268250866A4004C613D /* LaunchScreen.storyboard in Resources */,
 				FC11129A250869AB004C613D /* AutoScrollViewController.storyboard in Resources */,
 				FC1112A125086A6E004C613D /* CarouselCollectionViewCell.xib in Resources */,
+				FC1AB95A2511357600D59CA2 /* HomeViewController.storyboard in Resources */,
 				FC1112A725086B8F004C613D /* CarouselItemCollectionViewCell.xib in Resources */,
+				FC1AB95F251135A900D59CA2 /* BookshelfViewController.storyboard in Resources */,
 				FC111290250867A1004C613D /* TopViewController.storyboard in Resources */,
 				FC111265250866A4004C613D /* Assets.xcassets in Resources */,
 			);
@@ -493,14 +552,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC1AB95D2511359E00D59CA2 /* BookshelfViewController.swift in Sources */,
 				FC11128E25086795004C613D /* TopViewController.swift in Sources */,
 				FC111298250869A4004C613D /* AutoScrollViewController.swift in Sources */,
 				FC1112AB250871A2004C613D /* UIViewController+.swift in Sources */,
+				FC1AB951251132F400D59CA2 /* TabBarController.swift in Sources */,
 				FC1112962508697C004C613D /* AutoScrollableCarousel.swift in Sources */,
 				FC1112A625086B8F004C613D /* CarouselItemCollectionViewCell.swift in Sources */,
 				FC1112942508694C004C613D /* UICollectionView+.swift in Sources */,
+				FC1AB9582511357000D59CA2 /* HomeViewController.swift in Sources */,
 				FC1112A025086A6E004C613D /* CarouselCollectionViewCell.swift in Sources */,
+				FC1AB9612511461E00D59CA2 /* UIView+.swift in Sources */,
 				FC11125C250866A3004C613D /* AppDelegate.swift in Sources */,
+				FC6485E5251212BB00430362 /* HomeViewController+Animation.swift in Sources */,
 				FC1112A925086BF6004C613D /* CarouselItemProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
