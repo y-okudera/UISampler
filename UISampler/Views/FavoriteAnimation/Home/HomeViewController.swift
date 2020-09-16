@@ -24,6 +24,7 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tabBarController?.navigationItem.title = "FavoriteAnimation"
         self.favoritedImageView.image = self.thumbnailImageView.image
     }
     
