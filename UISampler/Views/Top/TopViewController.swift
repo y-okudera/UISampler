@@ -10,11 +10,14 @@ import UIKit
 
 enum UISample: Int, CaseIterable {
     case autoScroll
+    case favoriteAnimation
 
     var title: String {
         switch self {
         case .autoScroll:
             return "AutoScrollCarousel"
+        case .favoriteAnimation:
+            return "FavoriteAnimation"
         }
     }
 }
@@ -59,6 +62,9 @@ extension TopViewController: UITableViewDelegate {
         case .autoScroll:
             let autoScrollVC: AutoScrollViewController = .instantiate()
             self.navigationController?.pushViewController(autoScrollVC, animated: true)
+        case .favoriteAnimation:
+            let tabBarController: TabBarController = .instantiate()
+            self.navigationController?.pushViewController(tabBarController, animated: true)
         }
     }
 }

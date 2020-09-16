@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Top View Controller-->
+        <!--Top-->
         <scene sceneID="iAn-gB-07T">
             <objects>
                 <viewController storyboardIdentifier="TopViewController" id="KXv-gJ-LeT" customClass="TopViewController" customModule="UISampler" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,7 +40,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UEF-0m-G6O"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fg2-E1-Ei9"/>
+                    <navigationItem key="navigationItem" title="Top" id="fg2-E1-Ei9"/>
                     <connections>
                         <outlet property="tableView" destination="WtR-an-vrz" id="Yyk-tG-ZHx"/>
                     </connections>
