@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lws-dL-v16">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="qVM-9Y-yZy">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="lws-dL-v16" customClass="HomeViewController" customModule="UISampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w2t-dd-MkW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LR8-Tg-TpJ">
+                                <rect key="frame" x="232" y="701" width="150" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="0j5-2b-xox"/>
+                                    <constraint firstAttribute="height" constant="80" id="C0h-6O-rAe"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ii0-xy-nwP">
+                                <rect key="frame" x="16" y="60" width="200" height="183"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img1" translatesAutoresizingMaskIntoConstraints="NO" id="rLe-O8-eeH">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="123"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="McM-Bg-tuX"/>
+                                            <constraint firstAttribute="width" secondItem="rLe-O8-eeH" secondAttribute="height" multiplier="13:8" id="g3J-y1-aK1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHD-RD-uz1">
+                                        <rect key="frame" x="20" y="139" width="160" height="44"/>
+                                        <color key="backgroundColor" red="0.62745098040000002" green="0.27450980390000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="0Yg-u9-edA"/>
+                                            <constraint firstAttribute="width" constant="160" id="Zrt-80-44U"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="4" maxY="0.0"/>
+                                        <state key="normal" title="お気に入り登録" image="heart-off"/>
+                                        <state key="selected" title="お気に入り解除" image="heart-on"/>
+                                        <connections>
+                                            <action selector="tappedLikeButton:" destination="lws-dL-v16" eventType="touchUpInside" id="QiO-Uw-OQm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RW2-wj-l2S" firstAttribute="trailing" secondItem="LR8-Tg-TpJ" secondAttribute="trailing" constant="32" id="6vH-Hb-9KG"/>
+                            <constraint firstItem="RW2-wj-l2S" firstAttribute="bottom" secondItem="LR8-Tg-TpJ" secondAttribute="bottom" constant="32" id="Qsy-3V-mqA"/>
+                            <constraint firstItem="ii0-xy-nwP" firstAttribute="leading" secondItem="RW2-wj-l2S" secondAttribute="leading" constant="16" id="cFH-NQ-8ix"/>
+                            <constraint firstItem="ii0-xy-nwP" firstAttribute="top" secondItem="RW2-wj-l2S" secondAttribute="top" constant="16" id="geO-Jr-Z7W"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RW2-wj-l2S"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mLv-Sz-JGy"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="favoritedImageView" destination="LR8-Tg-TpJ" id="k1t-Ld-RXw"/>
+                        <outlet property="favoritedImageViewBottomConstraint" destination="Qsy-3V-mqA" id="jrd-SC-J0M"/>
+                        <outlet property="likeButton" destination="AHD-RD-uz1" id="TkM-xJ-hic"/>
+                        <outlet property="thumbnailImageView" destination="rLe-O8-eeH" id="JIH-1v-7IQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jlI-ea-j0i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="132.58928571428572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart-off" width="20" height="20"/>
+        <image name="heart-on" width="25" height="26"/>
+        <image name="img1" width="120" height="75"/>
+    </resources>
+</document>
