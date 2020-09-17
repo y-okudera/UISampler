@@ -11,6 +11,7 @@ import UIKit
 enum UISample: Int, CaseIterable {
     case autoScroll
     case favoriteAnimation
+    case tableViewLeftSideHeader
 
     var title: String {
         switch self {
@@ -18,6 +19,8 @@ enum UISample: Int, CaseIterable {
             return "AutoScrollCarousel"
         case .favoriteAnimation:
             return "FavoriteAnimation"
+        case .tableViewLeftSideHeader:
+            return "TableViewLeftSideSectionHeader"
         }
     }
 }
@@ -35,6 +38,14 @@ final class TopViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.tableView.indexPathsForSelectedRows?.forEach {
+            self.tableView.deselectRow(at: $0, animated: true)
+        }
     }
 }
 
@@ -55,7 +66,7 @@ extension TopViewController: UITableViewDataSource {
 extension TopViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("didSelectRowAt", indexPath)
+        print("TopViewController didSelectRowAt", indexPath)
         let uiSample = UISample(rawValue: indexPath.row)!
 
         switch uiSample {
@@ -65,6 +76,9 @@ extension TopViewController: UITableViewDelegate {
         case .favoriteAnimation:
             let tabBarController: TabBarController = .instantiate()
             self.navigationController?.pushViewController(tabBarController, animated: true)
+        case .tableViewLeftSideHeader:
+            let listVC: ListViewController = .instantiate()
+            self.navigationController?.pushViewController(listVC, animated: true)
         }
     }
 }
