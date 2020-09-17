@@ -1,5 +1,5 @@
 //
-//  ListViewController+LeftSideHeaderView.swift
+//  LeftSideHeaderViewCompatible.swift
 //  UISampler
 //
 //  Created by okudera on 2020/09/17.
@@ -8,16 +8,21 @@
 
 import UIKit
 
-protocol LeftSideHeaderViewCompatible {
-    var leftSideHeaderViews: [ListViewController.LeftSideHeaderViewData] { get }
+struct LeftSideHeaderViewData {
+    let section: Int
+    let headerView: UIView
 }
 
-extension ListViewController {
+protocol LeftSideHeaderViewCompatible: AnyObject {
+    var leftSideHeaderViews: [LeftSideHeaderViewData] { get set }
+    var tableView: UITableView! { get }
+    var tableViewLeadingConstraint: NSLayoutConstraint! { get }
 
-    struct LeftSideHeaderViewData {
-        let section: Int
-        let headerView: UIView
-    }
+    /// ヘッダビューの位置を更新する
+    func updateHeadersLocation()
+}
+
+extension LeftSideHeaderViewCompatible where Self: UIViewController {
 
     func updateHeadersLocation() {
 
