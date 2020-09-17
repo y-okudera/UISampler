@@ -39,6 +39,14 @@ final class TopViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.tableView.indexPathsForSelectedRows?.forEach {
+            self.tableView.deselectRow(at: $0, animated: true)
+        }
+    }
 }
 
 extension TopViewController: UITableViewDataSource {
@@ -58,7 +66,7 @@ extension TopViewController: UITableViewDataSource {
 extension TopViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("didSelectRowAt", indexPath)
+        print("TopViewController didSelectRowAt", indexPath)
         let uiSample = UISample(rawValue: indexPath.row)!
 
         switch uiSample {
