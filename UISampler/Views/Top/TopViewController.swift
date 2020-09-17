@@ -11,6 +11,7 @@ import UIKit
 enum UISample: Int, CaseIterable {
     case autoScroll
     case favoriteAnimation
+    case tableViewLeftSideHeader
 
     var title: String {
         switch self {
@@ -18,6 +19,8 @@ enum UISample: Int, CaseIterable {
             return "AutoScrollCarousel"
         case .favoriteAnimation:
             return "FavoriteAnimation"
+        case .tableViewLeftSideHeader:
+            return "TableViewLeftSideSectionHeader"
         }
     }
 }
@@ -65,6 +68,9 @@ extension TopViewController: UITableViewDelegate {
         case .favoriteAnimation:
             let tabBarController: TabBarController = .instantiate()
             self.navigationController?.pushViewController(tabBarController, animated: true)
+        case .tableViewLeftSideHeader:
+            let listVC: ListViewController = .instantiate()
+            self.navigationController?.pushViewController(listVC, animated: true)
         }
     }
 }

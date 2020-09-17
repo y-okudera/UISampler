@@ -34,7 +34,12 @@
 		FC1AB95D2511359E00D59CA2 /* BookshelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AB95C2511359E00D59CA2 /* BookshelfViewController.swift */; };
 		FC1AB95F251135A900D59CA2 /* BookshelfViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC1AB95E251135A900D59CA2 /* BookshelfViewController.storyboard */; };
 		FC1AB9612511461E00D59CA2 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AB9602511461E00D59CA2 /* UIView+.swift */; };
+		FC63CB1C25131D4C00547C89 /* ListViewController+LeftSideHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC63CB1B25131D4C00547C89 /* ListViewController+LeftSideHeaderView.swift */; };
 		FC6485E5251212BB00430362 /* HomeViewController+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6485E4251212BB00430362 /* HomeViewController+Animation.swift */; };
+		FCB82B572513562C0088926D /* LeftSideHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB82B562513562C0088926D /* LeftSideHeaderView.xib */; };
+		FCB82B59251356770088926D /* LeftSideHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB82B58251356770088926D /* LeftSideHeaderView.swift */; };
+		FCCE83592512E5CB00FE8DFE /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCE83582512E5CB00FE8DFE /* ListViewController.swift */; };
+		FCCE835B2512E5D200FE8DFE /* ListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCE835A2512E5D200FE8DFE /* ListViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +99,12 @@
 		FC1AB95C2511359E00D59CA2 /* BookshelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookshelfViewController.swift; sourceTree = "<group>"; };
 		FC1AB95E251135A900D59CA2 /* BookshelfViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookshelfViewController.storyboard; sourceTree = "<group>"; };
 		FC1AB9602511461E00D59CA2 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		FC63CB1B25131D4C00547C89 /* ListViewController+LeftSideHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+LeftSideHeaderView.swift"; sourceTree = "<group>"; };
 		FC6485E4251212BB00430362 /* HomeViewController+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Animation.swift"; sourceTree = "<group>"; };
+		FCB82B562513562C0088926D /* LeftSideHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftSideHeaderView.xib; sourceTree = "<group>"; };
+		FCB82B58251356770088926D /* LeftSideHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSideHeaderView.swift; sourceTree = "<group>"; };
+		FCCE83582512E5CB00FE8DFE /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		FCCE835A2512E5D200FE8DFE /* ListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +214,7 @@
 		FC11128B2508677C004C613D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FCCE83572512E47B00FE8DFE /* TableViewLeftSideHeader */,
 				FC1AB94E251132C900D59CA2 /* FavoriteAnimation */,
 				FC111291250868DE004C613D /* AutoScroll */,
 				FC11128C25086781004C613D /* Top */,
@@ -305,6 +316,26 @@
 				FC1AB95E251135A900D59CA2 /* BookshelfViewController.storyboard */,
 			);
 			path = Bookshelf;
+			sourceTree = "<group>";
+		};
+		FCB82B55251354D20088926D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FCB82B562513562C0088926D /* LeftSideHeaderView.xib */,
+				FCB82B58251356770088926D /* LeftSideHeaderView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FCCE83572512E47B00FE8DFE /* TableViewLeftSideHeader */ = {
+			isa = PBXGroup;
+			children = (
+				FCB82B55251354D20088926D /* Components */,
+				FCCE83582512E5CB00FE8DFE /* ListViewController.swift */,
+				FCCE835A2512E5D200FE8DFE /* ListViewController.storyboard */,
+				FC63CB1B25131D4C00547C89 /* ListViewController+LeftSideHeaderView.swift */,
+			);
+			path = TableViewLeftSideHeader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,12 +450,14 @@
 				FC1AB9552511330600D59CA2 /* TabBarController.storyboard in Resources */,
 				FC111268250866A4004C613D /* LaunchScreen.storyboard in Resources */,
 				FC11129A250869AB004C613D /* AutoScrollViewController.storyboard in Resources */,
+				FCB82B572513562C0088926D /* LeftSideHeaderView.xib in Resources */,
 				FC1112A125086A6E004C613D /* CarouselCollectionViewCell.xib in Resources */,
 				FC1AB95A2511357600D59CA2 /* HomeViewController.storyboard in Resources */,
 				FC1112A725086B8F004C613D /* CarouselItemCollectionViewCell.xib in Resources */,
 				FC1AB95F251135A900D59CA2 /* BookshelfViewController.storyboard in Resources */,
 				FC111290250867A1004C613D /* TopViewController.storyboard in Resources */,
 				FC111265250866A4004C613D /* Assets.xcassets in Resources */,
+				FCCE835B2512E5D200FE8DFE /* ListViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +585,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC63CB1C25131D4C00547C89 /* ListViewController+LeftSideHeaderView.swift in Sources */,
 				FC1AB95D2511359E00D59CA2 /* BookshelfViewController.swift in Sources */,
 				FC11128E25086795004C613D /* TopViewController.swift in Sources */,
 				FC111298250869A4004C613D /* AutoScrollViewController.swift in Sources */,
@@ -559,7 +593,9 @@
 				FC1AB951251132F400D59CA2 /* TabBarController.swift in Sources */,
 				FC1112962508697C004C613D /* AutoScrollableCarousel.swift in Sources */,
 				FC1112A625086B8F004C613D /* CarouselItemCollectionViewCell.swift in Sources */,
+				FCB82B59251356770088926D /* LeftSideHeaderView.swift in Sources */,
 				FC1112942508694C004C613D /* UICollectionView+.swift in Sources */,
+				FCCE83592512E5CB00FE8DFE /* ListViewController.swift in Sources */,
 				FC1AB9582511357000D59CA2 /* HomeViewController.swift in Sources */,
 				FC1112A025086A6E004C613D /* CarouselCollectionViewCell.swift in Sources */,
 				FC1AB9612511461E00D59CA2 /* UIView+.swift in Sources */,
