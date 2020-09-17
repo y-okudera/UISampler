@@ -10,7 +10,7 @@ import UIKit
 
 final class ListViewController: UIViewController, LeftSideHeaderViewCompatible {
 
-    var leftSideHeaderViews = [ListViewController.LeftSideHeaderViewData]()
+    var leftSideHeaderViews = [LeftSideHeaderViewData]()
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewLeadingConstraint: NSLayoutConstraint!
