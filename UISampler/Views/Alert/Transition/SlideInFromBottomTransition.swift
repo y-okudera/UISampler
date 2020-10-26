@@ -8,7 +8,7 @@
 
 import UIKit
 
-// 通常のPresent / Dismiss
+/// Present / Dismiss
 struct SlideInFromBottomTransition: AlertTransitionAnimation {
 
     /// 下端からスライドイン

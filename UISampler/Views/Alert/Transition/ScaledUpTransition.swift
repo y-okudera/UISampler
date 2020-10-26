@@ -8,7 +8,7 @@
 
 import UIKit
 
-// 拡大して表示 / 縮小して非表示
+/// Scaling
 struct ScaledUpTransition: AlertTransitionAnimation {
 
     /// 拡大して表示

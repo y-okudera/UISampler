@@ -8,7 +8,7 @@
 
 import UIKit
 
-// 通常のPush / Pop
+/// Push / Pop
 struct SlideInFromRightTransition: AlertTransitionAnimation {
 
     /// 右端からスライドイン
