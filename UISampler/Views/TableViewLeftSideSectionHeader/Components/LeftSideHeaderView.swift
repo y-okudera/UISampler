@@ -14,27 +14,15 @@ final class LeftSideHeaderView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        loadNib()
+        self.loadNib()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
-        loadNib()
+        self.loadNib()
     }
 
     func configure(image: UIImage?) {
         self.imageView.image = image
-    }
-}
-
-extension LeftSideHeaderView {
-
-    private func loadNib() {
-        let nibName = String(describing: type(of: self))
-        let nib = UINib(nibName: nibName, bundle: Bundle(for: type(of: self)))
-        if let view = nib.instantiate(withOwner: self, options: nil).first as? UIView {
-            view.frame = self.bounds
-            self.addSubview(view)
-        }
     }
 }
