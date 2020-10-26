@@ -12,6 +12,12 @@ enum UISample: Int, CaseIterable {
     case autoScroll
     case favoriteAnimation
     case tableViewLeftSideHeader
+    case alertSlideInFromBottom
+    case alertSlideInFromTop
+    case alertSlideInFromRight
+    case alertSlideInFromLeft
+    case alertFadeIn
+    case alertScaledUp
 
     var title: String {
         switch self {
@@ -21,6 +27,18 @@ enum UISample: Int, CaseIterable {
             return "FavoriteAnimation"
         case .tableViewLeftSideHeader:
             return "TableViewLeftSideSectionHeader"
+        case .alertSlideInFromBottom:
+            return "Alert-SlideInFromBottom"
+        case .alertSlideInFromTop:
+            return "Alert-SlideInFromTop"
+        case .alertSlideInFromRight:
+            return "Alert-SlideInFromRight"
+        case .alertSlideInFromLeft:
+            return "Alert-SlideInFromLeft"
+        case .alertFadeIn:
+            return "Alert-FadeIn"
+        case .alertScaledUp:
+            return "Alert-ScaledUp"
         }
     }
 }
@@ -79,6 +97,24 @@ extension TopViewController: UITableViewDelegate {
         case .tableViewLeftSideHeader:
             let listVC: ListViewController = .instantiate()
             self.navigationController?.pushViewController(listVC, animated: true)
+        case .alertSlideInFromBottom:
+            let alertVC = RegisterAlertViewController.instance(transitionType: .slideInFromBottom)
+            self.present(alertVC, animated: true)
+        case .alertSlideInFromTop:
+            let alertVC = RegisterAlertViewController.instance(transitionType: .slideInFromTop)
+            self.present(alertVC, animated: true)
+        case .alertSlideInFromRight:
+            let alertVC = RegisterAlertViewController.instance(transitionType: .slideInFromRight)
+            self.present(alertVC, animated: true)
+        case .alertSlideInFromLeft:
+            let alertVC = RegisterAlertViewController.instance(transitionType: .slideInFromLeft)
+            self.present(alertVC, animated: true)
+        case .alertFadeIn:
+            let alertVC = RegisterAlertViewController.instance(transitionType: .fadeIn)
+            self.present(alertVC, animated: true)
+        case .alertScaledUp:
+            let alertVC = RegisterAlertViewController.instance(transitionType: .scaledUp)
+            self.present(alertVC, animated: true)
         }
     }
 }
