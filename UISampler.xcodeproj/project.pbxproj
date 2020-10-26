@@ -10,6 +10,7 @@
 		31F6097B50A2E97449133CFF /* Pods_UISampler_UISamplerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76ECD1BA1C778644FC0B9D2D /* Pods_UISampler_UISamplerUITests.framework */; };
 		C69C2946F65BDF45F4E14CE9 /* Pods_UISamplerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DDE13DD804F03F03B3DE8C /* Pods_UISamplerTests.framework */; };
 		F2BF01601B384887C0485669 /* Pods_UISampler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3965C2F50D2440FE5B501E3C /* Pods_UISampler.framework */; };
+		FC0CB8492547172C00B381C7 /* AlertViewCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0CB8482547172C00B381C7 /* AlertViewCompatible.swift */; };
 		FC11125C250866A3004C613D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11125B250866A3004C613D /* AppDelegate.swift */; };
 		FC111265250866A4004C613D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC111264250866A4004C613D /* Assets.xcassets */; };
 		FC111268250866A4004C613D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC111266250866A4004C613D /* LaunchScreen.storyboard */; };
@@ -36,8 +37,18 @@
 		FC1AB9612511461E00D59CA2 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1AB9602511461E00D59CA2 /* UIView+.swift */; };
 		FC63CB1C25131D4C00547C89 /* LeftSideHeaderViewCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC63CB1B25131D4C00547C89 /* LeftSideHeaderViewCompatible.swift */; };
 		FC6485E5251212BB00430362 /* HomeViewController+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6485E4251212BB00430362 /* HomeViewController+Animation.swift */; };
+		FC8C4DE72543E27800A7ED25 /* AlertPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C4DE62543E27800A7ED25 /* AlertPresentationController.swift */; };
+		FC8C4DE92543EA9600A7ED25 /* RegisterAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C4DE82543EA9600A7ED25 /* RegisterAlertViewController.swift */; };
+		FC8C4DEB2543EBE300A7ED25 /* RegisterAlertViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8C4DEA2543EBE300A7ED25 /* RegisterAlertViewController.storyboard */; };
+		FCA152492546DD790002A80A /* AlertTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA152482546DD790002A80A /* AlertTransition.swift */; };
+		FCA1524C25470B080002A80A /* FadeInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA1524B25470B080002A80A /* FadeInTransition.swift */; };
 		FCB82B572513562C0088926D /* LeftSideHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB82B562513562C0088926D /* LeftSideHeaderView.xib */; };
 		FCB82B59251356770088926D /* LeftSideHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB82B58251356770088926D /* LeftSideHeaderView.swift */; };
+		FCC251EC25470E6900327203 /* ScaledUpTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC251EB25470E6900327203 /* ScaledUpTransition.swift */; };
+		FCC251F125470F2600327203 /* SlideInFromBottomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC251F025470F2600327203 /* SlideInFromBottomTransition.swift */; };
+		FCC251F625470FA400327203 /* SlideInFromLeftTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC251F525470FA400327203 /* SlideInFromLeftTransition.swift */; };
+		FCC251FB2547112400327203 /* SlideInFromRightTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC251FA2547112400327203 /* SlideInFromRightTransition.swift */; };
+		FCC25200254711C200327203 /* SlideInFromTopTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC251FF254711C200327203 /* SlideInFromTopTransition.swift */; };
 		FCCE83592512E5CB00FE8DFE /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCE83582512E5CB00FE8DFE /* ListViewController.swift */; };
 		FCCE835B2512E5D200FE8DFE /* ListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCE835A2512E5D200FE8DFE /* ListViewController.storyboard */; };
 /* End PBXBuildFile section */
@@ -69,6 +80,7 @@
 		D7DDE13DD804F03F03B3DE8C /* Pods_UISamplerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UISamplerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E68BB998423F527FFFD368F7 /* Pods-UISampler-UISamplerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UISampler-UISamplerUITests.release.xcconfig"; path = "Target Support Files/Pods-UISampler-UISamplerUITests/Pods-UISampler-UISamplerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F6173E98FCF35EB6B65A4502 /* Pods-UISamplerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UISamplerTests.debug.xcconfig"; path = "Target Support Files/Pods-UISamplerTests/Pods-UISamplerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC0CB8482547172C00B381C7 /* AlertViewCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewCompatible.swift; sourceTree = "<group>"; };
 		FC111258250866A3004C613D /* UISampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UISampler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC11125B250866A3004C613D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC111264250866A4004C613D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,8 +113,18 @@
 		FC1AB9602511461E00D59CA2 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		FC63CB1B25131D4C00547C89 /* LeftSideHeaderViewCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSideHeaderViewCompatible.swift; sourceTree = "<group>"; };
 		FC6485E4251212BB00430362 /* HomeViewController+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Animation.swift"; sourceTree = "<group>"; };
+		FC8C4DE62543E27800A7ED25 /* AlertPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentationController.swift; sourceTree = "<group>"; };
+		FC8C4DE82543EA9600A7ED25 /* RegisterAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAlertViewController.swift; sourceTree = "<group>"; };
+		FC8C4DEA2543EBE300A7ED25 /* RegisterAlertViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterAlertViewController.storyboard; sourceTree = "<group>"; };
+		FCA152482546DD790002A80A /* AlertTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTransition.swift; sourceTree = "<group>"; };
+		FCA1524B25470B080002A80A /* FadeInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInTransition.swift; sourceTree = "<group>"; };
 		FCB82B562513562C0088926D /* LeftSideHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftSideHeaderView.xib; sourceTree = "<group>"; };
 		FCB82B58251356770088926D /* LeftSideHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSideHeaderView.swift; sourceTree = "<group>"; };
+		FCC251EB25470E6900327203 /* ScaledUpTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledUpTransition.swift; sourceTree = "<group>"; };
+		FCC251F025470F2600327203 /* SlideInFromBottomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInFromBottomTransition.swift; sourceTree = "<group>"; };
+		FCC251F525470FA400327203 /* SlideInFromLeftTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInFromLeftTransition.swift; sourceTree = "<group>"; };
+		FCC251FA2547112400327203 /* SlideInFromRightTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInFromRightTransition.swift; sourceTree = "<group>"; };
+		FCC251FF254711C200327203 /* SlideInFromTopTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInFromTopTransition.swift; sourceTree = "<group>"; };
 		FCCE83582512E5CB00FE8DFE /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		FCCE835A2512E5D200FE8DFE /* ListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +178,16 @@
 				65D1D8F59BC26932B486AE74 /* Pods-UISamplerTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FC0CB8472547170400B381C7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FC8C4DE62543E27800A7ED25 /* AlertPresentationController.swift */,
+				FCA152482546DD790002A80A /* AlertTransition.swift */,
+				FC0CB8482547172C00B381C7 /* AlertViewCompatible.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		FC11124F250866A3004C613D = {
@@ -214,6 +246,7 @@
 		FC11128B2508677C004C613D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FC8C4DE52543E26A00A7ED25 /* Alert */,
 				FCCE83572512E47B00FE8DFE /* TableViewLeftSideSectionHeader */,
 				FC1AB94E251132C900D59CA2 /* FavoriteAnimation */,
 				FC111291250868DE004C613D /* AutoScroll */,
@@ -317,6 +350,30 @@
 				FC1AB95E251135A900D59CA2 /* BookshelfViewController.storyboard */,
 			);
 			path = Bookshelf;
+			sourceTree = "<group>";
+		};
+		FC8C4DE52543E26A00A7ED25 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				FC0CB8472547170400B381C7 /* Base */,
+				FCA1524A25470A240002A80A /* Transition */,
+				FC8C4DE82543EA9600A7ED25 /* RegisterAlertViewController.swift */,
+				FC8C4DEA2543EBE300A7ED25 /* RegisterAlertViewController.storyboard */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		FCA1524A25470A240002A80A /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				FCA1524B25470B080002A80A /* FadeInTransition.swift */,
+				FCC251EB25470E6900327203 /* ScaledUpTransition.swift */,
+				FCC251F025470F2600327203 /* SlideInFromBottomTransition.swift */,
+				FCC251F525470FA400327203 /* SlideInFromLeftTransition.swift */,
+				FCC251FA2547112400327203 /* SlideInFromRightTransition.swift */,
+				FCC251FF254711C200327203 /* SlideInFromTopTransition.swift */,
+			);
+			path = Transition;
 			sourceTree = "<group>";
 		};
 		FCB82B55251354D20088926D /* Components */ = {
@@ -455,6 +512,7 @@
 				FC1AB95A2511357600D59CA2 /* HomeViewController.storyboard in Resources */,
 				FC1112A725086B8F004C613D /* CarouselItemCollectionViewCell.xib in Resources */,
 				FC1AB95F251135A900D59CA2 /* BookshelfViewController.storyboard in Resources */,
+				FC8C4DEB2543EBE300A7ED25 /* RegisterAlertViewController.storyboard in Resources */,
 				FC111290250867A1004C613D /* TopViewController.storyboard in Resources */,
 				FC111265250866A4004C613D /* Assets.xcassets in Resources */,
 				FCCE835B2512E5D200FE8DFE /* ListViewController.storyboard in Resources */,
@@ -588,19 +646,29 @@
 				FC63CB1C25131D4C00547C89 /* LeftSideHeaderViewCompatible.swift in Sources */,
 				FC1AB95D2511359E00D59CA2 /* BookshelfViewController.swift in Sources */,
 				FC11128E25086795004C613D /* TopViewController.swift in Sources */,
+				FC0CB8492547172C00B381C7 /* AlertViewCompatible.swift in Sources */,
+				FC8C4DE92543EA9600A7ED25 /* RegisterAlertViewController.swift in Sources */,
 				FC111298250869A4004C613D /* AutoScrollViewController.swift in Sources */,
+				FCC25200254711C200327203 /* SlideInFromTopTransition.swift in Sources */,
+				FCC251EC25470E6900327203 /* ScaledUpTransition.swift in Sources */,
 				FC1112AB250871A2004C613D /* UIViewController+.swift in Sources */,
+				FCA1524C25470B080002A80A /* FadeInTransition.swift in Sources */,
 				FC1AB951251132F400D59CA2 /* TabBarController.swift in Sources */,
 				FC1112962508697C004C613D /* AutoScrollableCarousel.swift in Sources */,
 				FC1112A625086B8F004C613D /* CarouselItemCollectionViewCell.swift in Sources */,
 				FCB82B59251356770088926D /* LeftSideHeaderView.swift in Sources */,
 				FC1112942508694C004C613D /* UICollectionView+.swift in Sources */,
 				FCCE83592512E5CB00FE8DFE /* ListViewController.swift in Sources */,
+				FCA152492546DD790002A80A /* AlertTransition.swift in Sources */,
 				FC1AB9582511357000D59CA2 /* HomeViewController.swift in Sources */,
+				FCC251F125470F2600327203 /* SlideInFromBottomTransition.swift in Sources */,
 				FC1112A025086A6E004C613D /* CarouselCollectionViewCell.swift in Sources */,
+				FC8C4DE72543E27800A7ED25 /* AlertPresentationController.swift in Sources */,
+				FCC251F625470FA400327203 /* SlideInFromLeftTransition.swift in Sources */,
 				FC1AB9612511461E00D59CA2 /* UIView+.swift in Sources */,
 				FC11125C250866A3004C613D /* AppDelegate.swift in Sources */,
 				FC6485E5251212BB00430362 /* HomeViewController+Animation.swift in Sources */,
+				FCC251FB2547112400327203 /* SlideInFromRightTransition.swift in Sources */,
 				FC1112A925086BF6004C613D /* CarouselItemProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -41,6 +41,16 @@ extension UIView {
         }
     }
 
+    /// xibでviewを実装する場合の初期化処理
+    func loadNib() {
+        let nibName = String(describing: type(of: self))
+        let nib = UINib(nibName: nibName, bundle: Bundle(for: type(of: self)))
+        if let view = nib.instantiate(withOwner: self, options: nil).first as? UIView {
+            view.frame = self.bounds
+            self.addSubview(view)
+        }
+    }
+
     /// 再帰的にサブビューを取得する
     var recursiveSubviews: [UIView] {
         return subviews + subviews.flatMap { $0.recursiveSubviews }
