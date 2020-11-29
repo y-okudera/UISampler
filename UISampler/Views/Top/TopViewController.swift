@@ -18,6 +18,7 @@ enum UISample: Int, CaseIterable {
     case alertSlideInFromLeft
     case alertFadeIn
     case alertScaledUp
+    case stepCollectionViewLayout
 
     var title: String {
         switch self {
@@ -39,6 +40,8 @@ enum UISample: Int, CaseIterable {
             return "Alert-FadeIn"
         case .alertScaledUp:
             return "Alert-ScaledUp"
+        case .stepCollectionViewLayout:
+            return "StepCollectionViewLayout"
         }
     }
 }
@@ -115,6 +118,9 @@ extension TopViewController: UITableViewDelegate {
         case .alertScaledUp:
             let alertVC = RegisterAlertViewController.instance(transitionType: .scaledUp)
             self.present(alertVC, animated: true)
+        case .stepCollectionViewLayout:
+            let stepCollectionVC: StepCollectionViewViewController = .instantiate()
+            self.navigationController?.pushViewController(stepCollectionVC, animated: true)
         }
     }
 }

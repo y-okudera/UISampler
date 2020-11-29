@@ -14,4 +14,4 @@ iOS UI sample.
 |||![gif](https://github.com/y-okudera/UISampler/blob/develop/gif/AlertFromLeft.gif)|
 |||![gif](https://github.com/y-okudera/UISampler/blob/develop/gif/AlertFadeIn.gif)|
 |||![gif](https://github.com/y-okudera/UISampler/blob/develop/gif/AlertScaledUp.gif)|
-
+|5|[StepCollectionViewLayout](https://github.com/y-okudera/UISampler/tree/master/UISampler/Views/StepCollectionView)|![gif](https://github.com/y-okudera/UISampler/blob/develop/gif/StepCollectionViewLayout.gif)|

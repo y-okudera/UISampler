@@ -40,6 +40,14 @@
 		FC8C4DE72543E27800A7ED25 /* AlertPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C4DE62543E27800A7ED25 /* AlertPresentationController.swift */; };
 		FC8C4DE92543EA9600A7ED25 /* RegisterAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C4DE82543EA9600A7ED25 /* RegisterAlertViewController.swift */; };
 		FC8C4DEB2543EBE300A7ED25 /* RegisterAlertViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8C4DEA2543EBE300A7ED25 /* RegisterAlertViewController.storyboard */; };
+		FC975469251ADD9400843A27 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC975467251ADD9400843A27 /* PhotoCollectionViewCell.swift */; };
+		FC97546A251ADD9400843A27 /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC975468251ADD9400843A27 /* PhotoCollectionViewCell.xib */; };
+		FC97546D251AE08500843A27 /* StepCollectionViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC97546C251AE08500843A27 /* StepCollectionViewLayoutAttributes.swift */; };
+		FC975470251AE0EA00843A27 /* StepCollectionViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC97546F251AE0EA00843A27 /* StepCollectionViewProvider.swift */; };
+		FC975472251AE10A00843A27 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC975471251AE10A00843A27 /* Photo.swift */; };
+		FC9E1061251AE3E7006B5FCD /* StepCollectionViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E1060251AE3E7006B5FCD /* StepCollectionViewViewController.swift */; };
+		FC9E1063251AE3EF006B5FCD /* StepCollectionViewViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9E1062251AE3EF006B5FCD /* StepCollectionViewViewController.storyboard */; };
+		FC9E1065251AE496006B5FCD /* StepCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E1064251AE496006B5FCD /* StepCollectionViewLayout.swift */; };
 		FCA152492546DD790002A80A /* AlertTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA152482546DD790002A80A /* AlertTransition.swift */; };
 		FCA1524C25470B080002A80A /* FadeInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA1524B25470B080002A80A /* FadeInTransition.swift */; };
 		FCB82B572513562C0088926D /* LeftSideHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB82B562513562C0088926D /* LeftSideHeaderView.xib */; };
@@ -116,6 +124,14 @@
 		FC8C4DE62543E27800A7ED25 /* AlertPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentationController.swift; sourceTree = "<group>"; };
 		FC8C4DE82543EA9600A7ED25 /* RegisterAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAlertViewController.swift; sourceTree = "<group>"; };
 		FC8C4DEA2543EBE300A7ED25 /* RegisterAlertViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterAlertViewController.storyboard; sourceTree = "<group>"; };
+		FC975467251ADD9400843A27 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		FC975468251ADD9400843A27 /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		FC97546C251AE08500843A27 /* StepCollectionViewLayoutAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCollectionViewLayoutAttributes.swift; sourceTree = "<group>"; };
+		FC97546F251AE0EA00843A27 /* StepCollectionViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCollectionViewProvider.swift; sourceTree = "<group>"; };
+		FC975471251AE10A00843A27 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		FC9E1060251AE3E7006B5FCD /* StepCollectionViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCollectionViewViewController.swift; sourceTree = "<group>"; };
+		FC9E1062251AE3EF006B5FCD /* StepCollectionViewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StepCollectionViewViewController.storyboard; sourceTree = "<group>"; };
+		FC9E1064251AE496006B5FCD /* StepCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCollectionViewLayout.swift; sourceTree = "<group>"; };
 		FCA152482546DD790002A80A /* AlertTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTransition.swift; sourceTree = "<group>"; };
 		FCA1524B25470B080002A80A /* FadeInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInTransition.swift; sourceTree = "<group>"; };
 		FCB82B562513562C0088926D /* LeftSideHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftSideHeaderView.xib; sourceTree = "<group>"; };
@@ -247,9 +263,10 @@
 			isa = PBXGroup;
 			children = (
 				FC8C4DE52543E26A00A7ED25 /* Alert */,
-				FCCE83572512E47B00FE8DFE /* TableViewLeftSideSectionHeader */,
-				FC1AB94E251132C900D59CA2 /* FavoriteAnimation */,
 				FC111291250868DE004C613D /* AutoScroll */,
+				FC1AB94E251132C900D59CA2 /* FavoriteAnimation */,
+				FC975462251ADCA500843A27 /* StepCollectionView */,
+				FCCE83572512E47B00FE8DFE /* TableViewLeftSideSectionHeader */,
 				FC11128C25086781004C613D /* Top */,
 			);
 			path = Views;
@@ -361,6 +378,45 @@
 				FC8C4DEA2543EBE300A7ED25 /* RegisterAlertViewController.storyboard */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		FC975462251ADCA500843A27 /* StepCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				FC975473251AE22D00843A27 /* Cell */,
+				FC97546E251AE0DA00843A27 /* DataSource */,
+				FC97546B251AE06B00843A27 /* Layout */,
+				FC9E1062251AE3EF006B5FCD /* StepCollectionViewViewController.storyboard */,
+				FC9E1060251AE3E7006B5FCD /* StepCollectionViewViewController.swift */,
+			);
+			path = StepCollectionView;
+			sourceTree = "<group>";
+		};
+		FC97546B251AE06B00843A27 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				FC97546C251AE08500843A27 /* StepCollectionViewLayoutAttributes.swift */,
+				FC9E1064251AE496006B5FCD /* StepCollectionViewLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		FC97546E251AE0DA00843A27 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				FC975471251AE10A00843A27 /* Photo.swift */,
+				FC97546F251AE0EA00843A27 /* StepCollectionViewProvider.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		FC975473251AE22D00843A27 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FC975467251ADD9400843A27 /* PhotoCollectionViewCell.swift */,
+				FC975468251ADD9400843A27 /* PhotoCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		FCA1524A25470A240002A80A /* Transition */ = {
@@ -508,11 +564,13 @@
 				FC111268250866A4004C613D /* LaunchScreen.storyboard in Resources */,
 				FC11129A250869AB004C613D /* AutoScrollViewController.storyboard in Resources */,
 				FCB82B572513562C0088926D /* LeftSideHeaderView.xib in Resources */,
+				FC9E1063251AE3EF006B5FCD /* StepCollectionViewViewController.storyboard in Resources */,
 				FC1112A125086A6E004C613D /* CarouselCollectionViewCell.xib in Resources */,
 				FC1AB95A2511357600D59CA2 /* HomeViewController.storyboard in Resources */,
 				FC1112A725086B8F004C613D /* CarouselItemCollectionViewCell.xib in Resources */,
 				FC1AB95F251135A900D59CA2 /* BookshelfViewController.storyboard in Resources */,
 				FC8C4DEB2543EBE300A7ED25 /* RegisterAlertViewController.storyboard in Resources */,
+				FC97546A251ADD9400843A27 /* PhotoCollectionViewCell.xib in Resources */,
 				FC111290250867A1004C613D /* TopViewController.storyboard in Resources */,
 				FC111265250866A4004C613D /* Assets.xcassets in Resources */,
 				FCCE835B2512E5D200FE8DFE /* ListViewController.storyboard in Resources */,
@@ -651,9 +709,14 @@
 				FC111298250869A4004C613D /* AutoScrollViewController.swift in Sources */,
 				FCC25200254711C200327203 /* SlideInFromTopTransition.swift in Sources */,
 				FCC251EC25470E6900327203 /* ScaledUpTransition.swift in Sources */,
+				FC975469251ADD9400843A27 /* PhotoCollectionViewCell.swift in Sources */,
+				FC975470251AE0EA00843A27 /* StepCollectionViewProvider.swift in Sources */,
 				FC1112AB250871A2004C613D /* UIViewController+.swift in Sources */,
 				FCA1524C25470B080002A80A /* FadeInTransition.swift in Sources */,
 				FC1AB951251132F400D59CA2 /* TabBarController.swift in Sources */,
+				FC97546D251AE08500843A27 /* StepCollectionViewLayoutAttributes.swift in Sources */,
+				FC9E1061251AE3E7006B5FCD /* StepCollectionViewViewController.swift in Sources */,
+				FC9E1065251AE496006B5FCD /* StepCollectionViewLayout.swift in Sources */,
 				FC1112962508697C004C613D /* AutoScrollableCarousel.swift in Sources */,
 				FC1112A625086B8F004C613D /* CarouselItemCollectionViewCell.swift in Sources */,
 				FCB82B59251356770088926D /* LeftSideHeaderView.swift in Sources */,
@@ -666,6 +729,7 @@
 				FC8C4DE72543E27800A7ED25 /* AlertPresentationController.swift in Sources */,
 				FCC251F625470FA400327203 /* SlideInFromLeftTransition.swift in Sources */,
 				FC1AB9612511461E00D59CA2 /* UIView+.swift in Sources */,
+				FC975472251AE10A00843A27 /* Photo.swift in Sources */,
 				FC11125C250866A3004C613D /* AppDelegate.swift in Sources */,
 				FC6485E5251212BB00430362 /* HomeViewController+Animation.swift in Sources */,
 				FCC251FB2547112400327203 /* SlideInFromRightTransition.swift in Sources */,
